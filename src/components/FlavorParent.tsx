@@ -9,10 +9,10 @@ Remember to use immutability:
 - Fill in the addFlavor function. Add a flavor to the flavors array in state.
   Set the id of the new flavor using the `id` const. Test it using the "Test Add" button.
   Check the console.
-- Fill in the upvoteFlavor function. Add a vote to the flavor with the given id. Test it
-  using the "Test Upvote" button. Check the console.
 - Fill in the getFlavorById function. Test it by checking the console for flavor1 and
   flavor3.
+- Fill in the upvoteFlavor function. Add a vote to the flavor with the given id. Test it
+  using the "Test Upvote" button. Check the console.
 */
 
 let nextId: number = 4;
@@ -26,21 +26,16 @@ function FlavorParent() {
 
   function addFlavor(flavor: Flavor): void {
     const id = nextId++;
-    setFlavors(prev => [ ...prev, { ...flavor, id }]);
+    // TODO 1
   }
 
   function upvoteFlavor(flavorId: number): void {
-    setFlavors(prev => prev.map(flavor => {
-      if (flavor.id === flavorId) {
-        return { ...flavor, votes: flavor.votes + 1};
-      } else {
-        return flavor;
-      }
-    }));
+    // TODO 2
   }
 
   function getFlavorById(flavorId: number): Flavor|undefined {
-    return flavors.find(flavor => flavor.id === flavorId);
+    // TODO 3
+    return undefined;
   }
 
   function testAdd() {
